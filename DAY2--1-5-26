@@ -70,3 +70,56 @@ int main(){
     }
     return 0;
 }
+
+//Problem 4--Ternary Operator
+//Find the greater number among int32_t
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+     int a,b;
+     int max_number;
+        cout << "Enter a : ";
+        cin>> a;
+        cout << "Enter b :";
+     cin >> b;
+     //Ternanry Operator
+     max_number = (a > b) ? a : b;
+    
+    cout<<"Maximum is : "<< max_number;
+    return 0;
+}
+
+
+
+// Problem 5 -- Continue Statement
+// Print 1 to N and avoid those number which are divisible by 3
+
+#include <iostream>
+using namespace std;
+
+int main() {
+   int n;
+   cin >> n;
+   
+   for(int i = 1; i <=n; i++){
+         if(i % 3 == 0){
+         
+          continue;
+          }   
+          cout <<  i <<" ";
+  }
+     cout << "\n";
+     return 0;
+    
+}
+
+
+
+
+
+
+
+
