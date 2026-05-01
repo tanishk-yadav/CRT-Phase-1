@@ -150,10 +150,11 @@ int main(){
     
     cout << "is it Day or Night? :";
     cin >> dayOrNight;
-    cout << "Is motion Detected? (1 for yes / 0 for no): ";
-    cin>>motionDetected;
+   
     
     if(dayOrNight == "Night" || dayOrNight =="night"){
+     cout << "Is motion Detected? (1 for yes / 0 for no): ";
+     cin>>motionDetected;
      if(motionDetected){
          cout<<"True on the LED light with 100% brightness...";
      } else {
