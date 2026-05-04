@@ -1,0 +1,135 @@
+// Problem 1
+//pattern 1 to 10 10 times
+#include <iostream>
+using namespace std;
+int main()
+{
+  
+    for(int i = 1; i <= 10; i++)
+    {
+        // this define what to print in the print
+        for(int j = 1; j <= 10; j++){
+            cout << j;
+        }
+        cout << endl;
+    }
+    
+     return 0;
+}
+
+//Problem 2
+//Print *
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+  
+    for(int i = 1; i <= 10; i++)
+    {
+        // this define what to print in the print
+        for(int j = 1; j <= 10; j++){
+            cout << "*";
+        }
+        cout << endl;
+    }
+    
+     return 0;
+}
+
+
+// Problem 3
+// Print right angled triangle
+#include <iostream>
+using namespace std;
+int main(){
+     int n;
+    cout << "Enter the number: ";
+    cin >> n;
+   // number of times to print the pattern
+    for(int i = 1; i <= n; i++)
+    {
+        // this define what to print in the print
+        for(int j = 1; j <= i; j++){
+            cout << "* ";
+        }
+        cout << endl;
+    }
+    
+     return 0;
+}
+
+
+
+// Problem 4
+// Print mirror of  right angled triangle
+#include <iostream>
+using namespace std;
+int main(){
+     int n;
+    cout << "Enter the number: ";
+    cin >> n;
+  // number of times to print the pattern
+    for(int i = 1; i <= n; i++)
+    {
+        for(int k = n - i; k >= 0; k--){
+            cout<< " ";
+        }
+        // this define what to print in the print
+        for(int j = 1; j <= i; j++){
+            cout << "*";
+        }
+        cout << endl;
+    }
+    
+     return 0;
+}
+
+
+//Problem 5
+//Print rectangle
+
+#include<iostream>
+using namespace std;
+int main(){
+    
+    int row, col;
+    cout <<"Enter  row: ";
+    cin >> row;
+    cout << "Enter column: ";
+    cin >> col;
+    
+    for(int i = 1; i <= row; i++){
+        for(int j = 1; j <= col; j++){
+            cout <<" *";
+        }
+        cout<< endl;
+    }
+    return 0;
+}
+
+
+// Problem 6 
+// Print a pyramid
+#include <iostream>
+using namespace std;
+int main(){
+     int n;
+    cout << "Enter the number: ";
+    cin >> n;
+  // number of times to print the pattern
+    for(int i = 1; i <= n; i++)
+    {
+        for(int k = n - i; k >= 1; k--){
+            cout<< " ";
+        }
+        // this define what to print in the print
+        for(int j = 0; j <= i; j++){
+            cout << " *";
+        }
+        cout << endl;
+    }
+    
+     return 0;
+}
