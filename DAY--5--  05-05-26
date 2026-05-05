@@ -1,1 +1,129 @@
+//Problem -- 1
+// Pattern Printing upper Right angle triangle and its opposite
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+ int n;
+ cout << "Enter the random num: ";
+ cin >> n;
+
+ for(int i = 1; i <= n; i++){
+    //  cout << " ";
+     for(int j = 1; j <= i; j++){
+         cout <<"* " ;
+     }
+      cout << endl;
+ }
+ for(int k = n - 1; k >= 1; k--){
+
+             for(int l = k ; l >= 1; l--){
+             cout <<"* ";
+             
+         }
+         cout << endl;
+             
+         }
+    return 0;
+}
+
+
+
+//Problem -- 2 
+// Function declaration and initilization
+
+void printMessage(){
+    cout << "Hii, we are  learning something...";
+}
+
+int main(){
+    printMessage();
+    return 0;
+    }
+
+
+//Problem 3 
+//Making a function with aargument an return typedef
+int area(int a,int b){
+    return a * b;
+}
+int main(){
+    int length;
+    cout << "Enter the value of Length(cm): ";
+    cin >>length;
+    int width;
+    cout << "Enter the value of Width(cm): ";
+    cin >> width;
+    int areaOfRectangle = area(length , width);
+    cout <<"The area is " << areaOfRectangle << " cm";
+    return 0;
+}
+
+
+
+// Problem--4 
+// Types of Functions
+// 4.1-- No argument and no return type  
+
+
+#include <iostream>
+using namespace std;
+void DoorBell(){
+     cout << "ding dong...";
+}
+int main(){
+    DoorBell();
+    return 0;
+}
+
+// 4.2 argument , no return type 
+
+
+#include <iostream>
+using namespace std;
+
+void sendText(string message){
+    cout << message;
+}
+int main(){
+    sendText("BJP wins the match");
+    return 0;
+}
+
+
+// 4.3 no argument and return type
+
+
+#include <iostream>
+using namespace std;
+
+int ticketNumber(){
+    return 101;
+}
+int main(){
+    cout << ticketNumber();
+    return 0;
+}
+
+
+//4.4 argument,return type
+
+#include <iostream>
+using namespace std;
+int currencyConversion(int amountInUSD){
+    return amountInUSD/90;
+}
+int main(){
+    cout << currencyConversion(1000);
+    return 0;
+}
+
+
+
+
+
+
+
 
