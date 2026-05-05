@@ -120,10 +120,54 @@ int main(){
     return 0;
 }
 
+//  Problem--5
+// Function Overloading
 
 
+#include<iostream>
+using namespace std;
+
+int add(int a , int b){
+    return a+b;
+}
+
+int add(int a , int b , int c){
+    return a+b+c;
+}
 
 
+int add(int a , int b , int c , int d){
+    return a+b+c+d;
+}
+
+
+int main(){
+    cout << add(5,2) << endl;
+    cout << add(5,2,3) << endl;
+    cout << add(5,2,3,4) << endl;
+return 0;
+    
+}
+
+
+// Problem--7
+//Pointers
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int a, b;
+    cin >> a;
+    cin >> b;
+    `int *ptr = &a;
+    int *ptr = &b;
+    innt sum = *ptr1 + *ptr2;
+
+    cout << sum;
+    return 0;
+    
+}
 
 
 
