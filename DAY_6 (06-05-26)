@@ -125,3 +125,55 @@ int main(){
     setTemprature("TURBO");  // set Temprature to 18
     
 }
+
+
+
+// Problem -- 6
+// Classes and object
+
+#include <iostream>
+using namespace std;
+
+class Student {
+    public: 
+    string name;
+    int age;
+    
+    void introduce(){
+        cout << "Hi there, this person name is " << name << " and his age is " << age << endl;
+    }
+};
+
+
+int main(){
+    Student s1, s2 ,s3;
+    s1.name = "Tanishk";
+    s1.age = 20;
+    s1.introduce();
+    
+     s2.name = "Swaroop";
+    s2.age = 24;
+    s2.introduce();
+}
+
+
+//Problem--7
+//Access Modifier
+//7.1 -- public
+
+#include <iostream>
+using namespace std;
+
+class PublicPark{
+    public:
+    void enter(){
+        cout << "Anyone can enter in the park...";
+    }
+    
+};
+
+int main(){
+    PublicPark p;
+    p.enter();
+    
+}
