@@ -1,6 +1,6 @@
 //Problem -- 1 
 //Access specifier
-// 7.2 -- public
+// 7.2 -- PRIVATE
 
 #include <iostream>
 using namespace std;
@@ -20,6 +20,9 @@ int main()
     myaccount.showBalance();
     return 0;
 }
+
+
+
 
 // Access specifier
 //7.3 -- protected
@@ -43,3 +46,138 @@ int main(){
     child obj1;
     obj1.accessOfSecretCode();
 }
+
+
+
+//2.1 -- Default Contructor
+
+#include <iostream>
+using namespace std;
+
+class wifiConnection {
+      public:    
+        string networkName;
+        string password;
+        
+        //Contructor
+        wifiConnection(){
+            networkName = "ACTFiber";
+            password = "BJP12345";
+        }
+        
+       
+        void showDetails(){
+            cout << "Network name is: " << networkName << "\npassword is: " << password;
+        }
+};
+
+int main(){
+    wifiConnection obj1;
+    obj1.showDetails();
+    
+    
+}
+
+
+
+//2.2 -- Parameterized contruction
+
+
+#include <iostream>
+using namespace std;
+
+class student{
+    public:
+        string name;
+        int id;
+        
+        //Contructor
+        student(string studentName, int studentID){
+            
+            name = studentName;
+            id = studentID;
+            
+        }
+      
+    void showDetails() {
+        cout << "Name: " << name << "\nID: " << id;
+    }
+};
+
+int main(){
+    student std1("Abhishek", 101);
+    std1.showDetails();
+    return 0;
+}
+
+
+
+
+// Problem --3
+//Pillar of oops
+// Encapsulation
+
+#include <iostream>
+using namespace std;
+
+class bankAccount{
+    private:
+    int balance;
+    
+    public:
+    void setBalance(int amount){
+        if(amount >= 0){
+            balance = amount;
+        }else{
+            cout << "Enter a valid number....";
+        }
+    }
+    
+    
+    
+    public:
+    int getbalance() {
+        return balance;
+    }
+};
+
+
+int main() {
+    bankAccount obj1;
+    obj1.setBalance(5000);
+   cout <<  obj1.getbalance();
+}
+
+
+//Problem -- 4 
+//Abstraction
+// Abstracting means hiding the implementation and showing only the neccessary / essential
+// features to users
+//Abstract class -- class cannot be initialized and it is formed using the abstraact keyword
+//Abstract method 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
