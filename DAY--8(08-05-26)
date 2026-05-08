@@ -1,0 +1,230 @@
+#include <iostream>
+using namespace std;
+
+ 
+  
+   // Problem -- 1 
+   // Inheritance
+   // Types -- 1.1 Single Inheritance
+   
+   
+   class Vehicle{
+    //   public: 
+           void start(){
+               cout << "Vehicle Starts" << endl;
+           }
+           
+   };
+   
+   class Car : public Vehicle{
+       public:
+            void drive() {
+                cout << "Car is running" << endl;
+            }
+   };
+   
+int main()
+{
+   Car obj1;
+   obj1.drive();
+   obj1.start();
+
+    return 0;
+}
+
+
+
+  
+   // Problem -- 2 
+   // Inheritance
+   // Types -- 1.2 multiple Inheritance
+
+
+   #include <iostream>
+using namespace std;
+   
+   class Vehicle{
+      public: 
+           void start(){
+               cout << "Vehicle Starts" << endl;
+           }
+           
+   };
+   
+   class Car : public Vehicle{
+       public:
+            void drive() {
+                cout << "Car is running" << endl;
+            }
+   };
+   
+   class speedoMeter : public Car{
+       public: 
+            void speed(){
+                cout << "car is rinning at 600km/h" << endl;
+            
+   }
+       
+   };
+   
+int main()
+{
+   speedoMeter obj1;
+      obj1.start();
+      obj1.drive();
+      obj1.speed();
+
+    return 0;
+}
+
+
+
+
+   // Problem --3
+   // Inheritance
+   // Types -- 1.3 heiaricial Inheritance
+
+
+   #include <iostream>
+   using namespace std;
+
+   
+   class Vehicle{
+      public: 
+           void start(){
+               cout << "Vehicle Starts" << endl;
+           }
+           
+   };
+   
+   class Car : public Vehicle{
+       public:
+            void drive() {
+                cout << "Car is running...." << endl;
+            }
+   };
+   
+   class bike : public Vehicle{
+       public: 
+            void drive(){
+                cout << "Bike is running...." << endl;
+            
+   }
+       
+   };
+   
+int main()
+{
+   Car obj1;
+   bike obj2;
+      obj1.start();
+      obj1.drive();
+    //   obj1.speed();
+    
+      obj2.start();
+      obj2.drive();
+    return 0;
+}
+
+
+
+    // Problem -- 4
+  // Inheritance
+  // Types -- 1.4.1 multiple Inheritance
+  
+  #include <iostream>
+  using namespace std;
+   
+ 
+   
+  class Car {
+      public:
+            void drive() {
+                cout << "Car is running...." << endl;
+            }
+  };
+   
+  class Bike{
+      public: 
+            void drive(){
+                cout << "Bike is running...." << endl;
+            
+  }
+       
+  };
+  class Vehicle : public Car, public Bike{
+    //   public: 
+    //       void start(){
+    //           cout << "Vehicle Starts" << endl;
+    //       }
+           
+  };
+  
+   
+int main()
+{
+  Vehicle obj1;
+  
+        // obj1.drive(); // ambiguous
+
+      obj1.Car :: drive();
+      obj1.Bike :: drive();
+    
+    return 0;
+}
+
+
+
+//     Problem -- 4
+//   Inheritance
+//   Types -- 1.4.2 multiple Inheritance
+  
+  #include <iostream>
+  using namespace std;
+   
+  class Parent1 {
+      public: 
+          void giveMeMoney(){
+              cout << "Papa mujhe paise de do" << endl;
+          }
+  };
+  
+  class Parent2 {
+      public: 
+          void giveMeMoney(){
+              cout << "Mummmy mujhe paise de do" << endl;
+          }
+  };
+  
+  class child : public Parent1, public Parent2{
+      
+  };
+
+int main(){
+    child obj1;
+    obj1.Parent1 :: giveMeMoney();
+    obj1.Parent2 :: giveMeMoney();
+}
+
+
+// Problem --5
+//Diamond Problem
+
+#include <iostream>
+using namespace std;
+
+class A {
+    public:
+     void print(){
+         cout << "Bjp Wins..";
+         
+     }
+};
+class B : virtual public A{};
+class C : virtual public A{};
+class D : public B, public C{};
+
+int main() {
+    D obj1;
+    obj1.print();
+}
