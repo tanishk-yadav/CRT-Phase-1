@@ -1,0 +1,49 @@
+// Problem -- 1 
+// Function overriding
+
+
+#include <iostream>
+using namespace std;
+
+
+class Appliance{
+    public:
+   virtual void turnOn(){
+        cout << "Appliance is starting up..." << endl;
+    }
+    virtual void work() = 0;
+};
+class Fan : public Appliance{
+    public: 
+        void turnOn() override{
+            cout << "Fan blades are moving slowly.. " << endl;
+        
+        }
+        void work() override{
+            cout << "Fan is cooling the room.." << endl;
+            
+        }
+};
+class Toaster : public Appliance{
+  void work() override{
+      cout <<"Toaster is heating up the breads " << endl;
+  }  
+};
+
+
+int main()
+{
+    
+   Appliance* kitchenApp;
+   Fan myFan;
+   kitchenApp = &myFan;
+   kitchenApp -> turnOn();
+   kitchenApp -> work();
+   
+   Toaster myToast;
+   kitchenApp = &myToast;
+   kitchenApp -> turnOn();
+   kitchenApp -> work();
+
+    return 0;
+}
